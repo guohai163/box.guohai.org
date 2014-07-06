@@ -1,0 +1,629 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fff;
+	color: #000;
+	line-height: normal;
+}
+body, input, select, textarea, table {
+	font-family: Simsun, serif;
+	font-size: 12px;
+}
+img {
+	border: none;
+}
+ul {
+	list-style: none;
+}
+a {
+	color: #00c;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#wrapper {
+	width: 790px;
+        background: url(../Images/ui.gif) repeat-x left -373px;
+}
+#header {
+        text-align: right;
+        height: 39px;
+        line-height: 39px;
+        padding-right: 13px;
+/*        background: url(../Images/ui.gif) no-repeat -256px;*/
+	background: transparent url(../Images/ui.gif) repeat-x scroll left -256px;
+        margin-bottom: 7px;
+	position: relative;
+}
+.toolbar a {
+        color: #fff;
+        text-decoration: underline;
+        margin-left: 12px;
+}
+.logo {
+	float: left;
+        width: 289px;
+        height: 38px;
+        overflow: hidden;
+        line-height: 1000px;
+        background: url(../Images/ui.gif) no-repeat left -315px;
+}
+.playbtn {
+        background: url(../Images/ui.gif) no-repeat -200px top;
+        width: 7px;
+        height: 8px;
+        overflow: hidden;
+        position: absolute;
+        top: 4px;
+}
+.up1 {
+        width: 13px;
+        height: 14px;
+        line-height: 100px;
+        display: block;
+        overflow: hidden;
+        background: url(../Images/ui.gif) no-repeat -260px top;
+        margin-top: 5px;
+}
+.down1 {
+        width: 13px;
+        height: 14px;
+        line-height: 100px;
+        display: block;
+        overflow: hidden;
+        background: url(../Images/ui.gif) no-repeat -227px top;
+        margin-top: 5px;
+}
+#sidebar {
+        width: 132px;
+        height: 432px;
+        position: relative;
+        float: left;
+        margin-left: 14px;
+        display: inline;
+}
+#sidebar h2 {
+	line-height: 26px;
+	font-size: 12px;
+	padding-right: 7px;
+	font-weight: bold;
+}
+#sidebar h2 span {
+	float: right;
+	font-weight: normal;
+}
+#sidebar h2 span a {
+	color: #666;
+	text-decoration: underline;
+}
+.sidenav {
+	padding-left: 10px;
+}
+#menuMybox {
+	height:95px;
+	overflow:hidden;
+	position: relative;
+}
+.sidenav li {
+	height: 19px;
+	position: relative;
+}
+.sidenav li.current {
+	border: 1px solid #71CAB2;
+	border-right: none;
+	color: #666;
+	font-weight: bold;
+	padding-left: 9px;
+	background: #fff;
+	height: 17px;
+	line-height: 17px;
+	margin-right: -3px;
+}
+.sidenav li.menucurrent {
+        border: 1px solid #71CAB2;
+        border-right: none;
+        color: #666;
+        font-weight: bold;
+        padding-left: 9px;
+        background: #fff;
+        height: 17px;
+        line-height: 17px;
+        margin-right: -3px;
+        position: relative;
+}
+.sidenav li img {
+	vertical-align: middle;
+}
+.sidenav li a {
+	line-height: 17px;
+	padding-top: 1px;
+	height: 17px;
+	display: block;
+	padding-left: 10px;
+}
+.sidenav li a:hover {
+	border: 1px solid #71CAB2;
+	text-decoration: none;
+	border-right: none;
+	background: #fff;
+	padding-top: 0;
+	padding-left: 9px;
+}
+.moresp {
+	text-align: right;
+	padding: 5px 7px;
+}
+.moresp a {
+	color: #666;
+	text-decoration: underline;
+}
+.related {
+	line-height: 18px;
+	list-style: none;
+	height: 90px;
+	overflow: hidden;
+}
+#main1 {
+	float: left;
+	width: 298px;
+	height: 423px;
+	padding: 1px;
+	background: #fff;
+	border: 1px solid #71CAB2;
+	border-left-width: 3px;
+}
+.playoption {
+	background: #D8F2E8;
+	height: 23px;
+	line-height: 23px;
+	padding-left: 6px;
+}
+.playoption input {
+	vertical-align: middle;
+}
+
+.playlist {
+	height: 363px;
+	/*background: url(plbg3.gif);*/
+	overflow: auto;
+}
+.playlist table {
+	width: 280px;
+	text-align: center;
+	border-collapse: collapse;
+	/*background: url(plbg.gif);*/
+}
+.playlist th {
+	height: 26px;
+	border-bottom: 1px solid #CBCBCB;
+}
+.playlist td {
+	height: 25px;
+	border-bottom: 1px solid #CBCBCB;
+}
+th.songname {
+	padding-left: 30px;
+	text-align: left;
+}
+td.songname {
+	text-align: left;
+	padding-left: 8px;
+	width: 160px;
+}
+.ready, .play, .del {
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        margin-right: 4px;
+        background: url(../Images/ui.gif) no-repeat -329px top;
+        display: inline-block;
+}
+.play {
+        background: url(../Images/ui.gif) no-repeat -293px top;
+}
+.del {
+        background: url(../Images/ui.gif) no-repeat;
+        width: 8px;
+        height: 8px;
+        line-height: 100px;
+        overflow: hidden;
+}
+.up2, .down2, .collect {
+	width: 9px;
+	height: 11px;
+	background: url(../Images/ui.gif) -171px top;
+	display: inline-block;
+	line-height: 100px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.down2 {
+	background: url(../Images/ui.gif) -142px top;
+}
+.collect {
+	background: url(../Images/ui.gif) no-repeat right top;
+	width: 20px;
+	height: 14px;
+}
+.playlist .singer {
+        text-align: left;
+}
+.playlist tr#playing td {
+        background: url(../Images/ui.gif) repeat-x left -211px;
+}
+.clearhistory {
+	text-align: right;
+	border-top: 1px solid #CBCBCB;
+	padding-top: 10px;
+	padding-right: 25px;
+}
+.clearhistory a {
+	color: #666;
+	text-decoration: underline;
+}
+.clearhistory img {
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.clearhistory p {
+ text-align: left;
+ padding: 0 10px;
+}
+
+#main2 {
+  	width: 335px;
+        float: left;
+	margin-left: 5px;
+        display: inline;
+}
+.playbox {
+	border: 1px solid #71CAB2;
+	margin-bottom: 2px;
+}
+.playstat {
+	background: #B1EDEC url(../Images/ui.gif) repeat-x left -128px;
+	line-height: 18px;
+	font-weight: bold;
+	padding: 5px;
+	border: 1px solid #fff;
+}
+.playstat a {
+	font-weight: normal;
+}
+.infobar span {
+	float: right;
+}
+.infobar a {
+	text-decoration: underline;
+}
+.infobar img {
+	vertical-align: middle;
+}
+.playstat h3 {
+	font-size: 12px;
+}
+.lyric {
+	padding: 1px;
+	border: 1px solid #71CAB2;
+	background: #fff;
+	text-align: center;
+	line-height: 16px;
+	height: 288px;
+	overflow: hidden;
+}
+.lyric h2 {
+	font-size: 12px;
+	text-align: left;
+	font-weight: normal;
+	padding: 0 8px;
+	background: #D8F2E8;
+	line-height: 23px;
+}
+.lyric h2 span {
+	float: right;
+}
+.lyric h2 span a {
+	text-decoration: underline;
+}
+.hlyric {
+	color: #FF8400;
+}
+.sort img {
+	visibility: hidden;
+}
+.sortshow .sort img {
+	visibility: visible;
+}
+.youlike {
+        position: absolute;
+        bottom: 5px;
+        width: 132px;
+        border-top: 1px solid #AAC5D2;
+}
+.scroll {
+        float: right;
+        width: 13px;
+        margin-right: 7px;
+        display: inline;
+}
+.delall {
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        background: url(../Images/ui.gif) no-repeat -108px top;
+        overflow: hidden;
+        margin-left: 2px;
+}
+.infobar .dl1, .infobar .diy1 {
+        background: url(../Images/ui.gif) no-repeat -72px top;
+        width: 16px;
+        height: 14px;
+        margin-right: 4px;
+        display: inline-block;
+        overflow: hidden;
+        float: none;
+}
+.infobar .diy1 {
+        background: url(../Images/ui.gif) no-repeat -28px top;
+}
+.loginbox{
+/*
+        width: 293px;
+        height: 158px;
+        background: url(card/indexlogin1.gif) no-repeat left top;
+*/
+        position: absolute;
+        right: 250px;
+        top: 200px;
+        text-align: center;
+        z-index: 999;
+}
+.account{
+        cursor: pointer;
+/*
+	position: absolute;
+	bottom: 5px;
+	width: 132px;
+	border-top: 1px solid #AAC5D2;
+*/
+}
+
+/*
+.blacklayer {
+	background: url(layer.png);
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+}
+* html .blacklayer {
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="images/layer.png");
+	background:none;
+}
+*/
+
+.accbox {
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	top:5%;
+	z-index: 999;
+}
+.cardarea {margin: 0 auto;width: 282px;}
+
+
+.collectlist {
+	position: relative;
+	border-top: 1px solid #CBCBCB;
+	padding-top: 14px;
+	padding-left: 12px;
+	font-size: 14px;
+	font-weight: bold;
+	zoom: 1;
+}
+.collectlist a, .collectip a {
+	text-decoration: underline;
+}
+.collectip {
+	font-size: 12px;
+	border-top: 1px solid #CBCBCB;
+	line-height: 18px;
+	padding: 2px 17px 0;
+}
+/* 全局CSS定义 */
+.passportc ul,.passportc ol,.passportc li,.passportc span,.passportc p,.passportc form {margin: 0; padding: 0; border: 0;}
+.passportc img,.passportc a img{border:0; margin:0; padding:0;}
+.passportc ul,.passportc ol,.passportc li {list-style:none}
+
+/* 链接颜色 */
+.passportc a {color: #313031;text-decoration:none}
+.passportc a:link,.passportc a:visited{color:#FF6000;}
+.passportc a:hover {text-decoration:underline;}
+
+/* 登录前 */
+.passportc {width:278px;height:158px;font-size:12px;border:1px #FFA200 solid;background:#fff;text-align:left;}
+.passportc b{color:#FF0000;}
+.pptitle,.pptitle2{margin:6px 10px -8px 10px!important;margin:6px 10px 0px 10px;font-size:12px;}/*标题*/
+.pptitle2 span{font-weight: bold;}
+.ppthree{
+	display:inline;
+	color:#999999;
+	margin:0 55px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.ppcontent{width:268px;height:136px;padding:15px 0px 0px 10px!important;padding:0px 0px 0px 10px;background:url(http://www.sohu.com/passport/images/pic001.gif) no-repeat center;position: relative;}
+
+.passportc .error {color:#FF6000;height:16px;}
+.passportc .card {font-weight: normal;padding:3px 0px 0px 23px!important;padding:10px 0px 0px 23px;}
+.passportc .card li{margin:0px 0px 5px 0px!important;margin:0px 0px 3px 0px;}
+.passportc .card li a:link,.passportc .card li a:visited{margin-right:27px;}
+
+.passportc .card .info{padding-top:2px!important;padding-top:5px;}
+.passportc .card .sign{background:url(http://www.sohu.com/passport/images/pic004.gif) no-repeat; width:70px; height:21px;border:0;font-size:12px;padding-top:1px!important;padding-top:4px;color:#333;}
+.passportc .card .ppinput {border:1px #FFA200 solid;height:17px;width:166px!important;width:164px;background:#fff;font-size:12px;}
+
+.card dt,.card dd{font-size:12px;margin-top:7px;}
+.card dd{margin-top:10px;margin-left:0px;_margin-left:-40px;MARGIN-TOP: 10px; MARGIN-LEFT: -30px;white-space: nowrap;}/*FF SA IE6*/
+/*+html .card dd{margin-left:-40px;} IE7 */
+.card dd a:link,.card dd a:visited{margin-right:27px;}
+.card dt span{margin:5px 34px 0px 38px;color: #313031;}
+.card dl a:link { margin-right: 27px}
+.passportc .card dl{padding-top:10px;}
+
+/* select下拉 */
+.ppselecter, .ppselecter * {font-size:12px; font-family:"宋体", Verdana, Arial, Helvetica, sans-serif; line-height:normal;}
+.ppselecter {border: 1px solid #FFA700; width: 166px;margin-left:1px;}
+.ppselecter .ppseltit {background-color: #FFF6DF;height:15px;padding-top:4px;text-indent:6px; color:#FF6000;}
+.ppselecter table td table td {padding: 3px;}
+.ppselecter .active {background:#FDD463; color:#333; font-weight: normal;}
+
+/* 登录中 */
+.ppWaitMsg{background:url(http://www.sohu.com/passport/images/load.gif) no-repeat center 30px;color:#FF6000;padding-top:90px;padding-left:50px;font-size:12px;width:190px;font-weight: normal;}
+
+/* 登录后 */
+.passportc .listContA{width:258px;height:71px;border:1px #FFD391 solid;background:#fff;margin:1px 3px 0px -1px!important;margin:8px 3px 0px -1px;color:#FF6000;}
+.passportc .listContA ul{margin-top:7px!important;margin-top:9px;margin-left:8px;}
+.passportc .listContA li{margin-bottom:7px;}
+.passportc .listContA li p{color:#313031;}
+
+.passportc .middle{color:#FF6000;margin-left:-1px;}
+.passportc .middle li{float:left;margin-top:6px;margin-left:5px;}
+.passportc .middle li img{background:url(http://www.sohu.com/passport/images/pic005.gif) no-repeat;width:34px;height:13px;}
+.passportc .middle .current{padding:6px 7px 2px 7px;margin:-1px 0px 0px 0px;background:#fff;border:1px #FFD391 solid;border-top:0px;}
+
+.passportc .bottom{color:#FF6000;width:258px;clear: both;}
+.passportc .bottom ul{margin-left:0px!important;margin-left:-10px;}
+.passportc .bottom li{float:left;margin:6px 0 0 0; padding: 0;}
+.passportc .bottom .dabenying{float:right;margin-top:1px;}
+.passportc .bottom .dabenying img{width:54px;height:21px;background:url(http://www.sohu.com/passport/images/pic007.gif) no-repeat;border:0;}
+
+
+.passportc .candle{position: absolute;top:12px;left:220px;}
+
+.avatar {
+	padding: 1px;
+	border: 1px solid #939393;
+	float: left;
+	margin-right: 12px;
+}
+.ppDefWel h3 {
+	font-size: 12px;
+	margin: 0 0 4px 67px;
+	padding: 0;
+}
+.passportc ul li a {margin:0; padding: 0;}
+.ppDefWel {
+	line-height: 18px;
+	color: #333333;
+	text-align: left;
+	padding: 4px;
+}
+.ppDefWel p {
+	margin-left: 67px;
+}
+.ppDefWel p a {
+	padding: 0;
+	text-decoration: underline;
+	margin: 0;
+}
+.tipwin {
+	width: 207px;
+	background: url(../Images/music_sprite.gif) no-repeat left -504px;
+	padding-top: 4px;
+	font-size: 12px;
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	text-align: left;
+	z-index: 999;
+}
+.tipwin h3 {
+	line-height: 26px;
+	padding: 0 10px;
+	margin: 0;
+	font-size: 14px;
+	color: #FF9000;
+	height: 28px;
+}
+.tipwin h3 span {
+	float: right;
+	color: #ccc;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	padding-top: 7px;
+}
+.tip {
+	border: 1px solid #FF9000;
+	border-top: none;
+	height: 124px;
+	position: relative;
+	background: #F4F4F4;
+}
+.tiptable1 {
+	border-collapse: collapse;
+	margin: 0 10px;
+	width:100px;
+}
+.tiptable1 td {
+	height: 90px;
+	font-size: 12px;
+	line-height: 18px;
+}
+.closebtn {
+	float: right;
+	margin-right: 10px;
+}
+.lyric1 {
+	height: 88px;
+	line-height: 22px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: 1px solid #C1C1C1;
+	cursor: pointer;
+}
+.lyric1 li {
+	background: url(lyric1.gif) repeat-x;
+	padding: 0 10px;
+}
+.lyric1 li.hover {
+	background: #FFF8D6;
+}
+.newsp {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #fff;
+	padding-top: 5px;
+	text-align: center;
+}
+.spname {
+	width: 114px;
+	border: 1px solid #C1C1C1;
+}
+.newspbtn {
+	width: 66px;
+	height: 22px;
+	font-size: 12px;
+}
+.scrollbox {
+	position: absolute;
+	top: 48px;
+	right: 8px;
+	width: 13px;
+}
+.scrollbox img {
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+.winlink {
+        color: #00c;
+        text-decoration: underline;
+}

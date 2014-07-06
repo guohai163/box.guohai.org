@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>音乐盒</title>
+    <link href="css/cssrest.css" rel="stylesheet" type="text/css" />
+    <link href="css/sytle.css" rel="stylesheet" type="text/css" />
+    <link href="css/todayrecom.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="Js/prototype.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/slider.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/MediaPlayClass.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/MenuClass.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/PageData.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/DataModel.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <h1>
+                <a href="javascript:void(null);">nu网络娱乐管理器</a></h1>
+            <ul class="tnav">
+                <li><a href="#" class="on_01" onclick="webui.WebTopUI(0);" id="menuMusicId">音乐</a></li>
+                <li class="off_02" id="menuGameId"><a href="#" onclick="webui.WebTopUI(1);">游戏</a></li>
+                <li class="off_03"><a href="#">视频</a></li>
+                <li class="off_04"><a href="#">歌伴舞</a></li>
+            </ul>
+            <p class="mrtoplk">
+                <a href="javascript:void(null);">
+                    <img src="images/mtoprc_05.gif" alt="" /></a> <a href="javascript:void(null);">
+                        <img src="images/mtoprc_04.gif" alt="" /></a> <a href="javascript:void(null);">
+                            <img src="images/mtoprc_03.gif" alt="" /></a>
+            </p>
+        </div>
+        <!---->
+        <div class="mview">
+            <div class="mlwcon" id="allRightIndent">
+                <div class="wx_top">
+                    <ul class="mctnav">
+                        <li id="nowpalyMenu"><a href="#" onclick="webui.WebTop2UI(0);">正在播放</a></li>
+                        <li id="todayMenu"><a href="#" onclick="webui.WebTop2UI(1);">今日推荐</a></li>
+                        <li id="netMusicMenu" class="on"><a href="#" onclick="webui.WebTop2UI(2);">网络曲库</a></li>
+                        <li class="ips">
+                            <input type="text" id="SearchKey" class="w135" />
+                            <select id="SearchSign" class="sel">
+                                <option value="21">歌曲查找</option>
+                                <option value="22">歌手查找</option>
+                                <option value="23">专辑查找</option>
+                            </select>
+                            <input type="button" value="" class="sub" onclick="webui.BindCentenMenu('S'+$F('SearchKey'),-1,$F('SearchSign'));" /></li>
+                    </ul>
+                </div>
+                <!---->
+                <div id="nowpalyDiv" class="wx_mid" style="background-color: #000; display: none;
+                    height: 422px; margin: 5px; font-size: 14px; line-height: 25px;">
+                    <div id="lrcormp" style="border-bottom: solid 1px #7eb2D7; height: 21px;">
+                        <ul class="lrcHeader">
+                            <li class="on">歌词</li>
+                            <li onmousemove="this.className='mouse'" onmouseout="this.className=''" onclick="webui.UpdateLrcOrMp(2);">
+                                旋律</li>
+                        </ul>
+                    </div>
+                    <div id="mpl" style="display: none; width: 645px; height: 402px;">
+                    </div>
+                    <div id="lrc" style="text-align: center; color: #3399FF; border: solid 1px black;
+                        width: 645px; height: 402px; overflow: auto">
+                    </div>
+                </div>
+                <div id="todayDiv" class="wx_mid" style="display: none; height: 432px; overflow-y: scroll;">
+                    <!--todaycom-->
+                    <div class="mlvt">
+                        <div class="newzj">
+                            <ul class="tnav">
+                                <li class="htit">最新专辑</li>
+                                <li id="hmenu4" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateHeaderMenu(4);">
+                                    日韩</a></li>
+                                <li id="hmenu3"><a href="javascript:void(null);" onmouseover="objTDR.UpdateHeaderMenu(3);">
+                                    欧美</a></li>
+                                <li id="hmenu2"><a href="javascript:void(null);" onmouseover="objTDR.UpdateHeaderMenu(2);">
+                                    华语</a></li>
+                                <li id="hmenu1"><a href="javascript:void(null);" onmouseover="objTDR.UpdateHeaderMenu(1);">
+                                    热门</a></li>
+                            </ul>
+                            <div id="special1" style="display: none;">
+                            </div>
+                            <div id="special2" style="display: none;">
+                            </div>
+                            <div id="special3" style="display: none;">
+                            </div>
+                            <div id="special4" style="display: none;">
+                            </div>
+                            <div class="cail">
+                            </div>
+                        </div>
+                        <div class="wxsbad">
+                            <img src="images/1246009907696.gif" alt="" /></div>
+                        <div class="swxlist">
+                            <ul class="tnav">
+                                <li id="lmenu11" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(1,'lmenu1','lmusic1');">
+                                    内地新歌</a></li>
+                                <li id="lmenu12"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(2,'lmenu1','lmusic1');">
+                                    港台新歌</a></li>
+                            </ul>
+                            <div id="lmusic11" style="display: none;">
+                            </div>
+                            <div id="lmusic12" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(0,'lmenu1');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                        <div class="srtlist">
+                            <ul class="tnav">
+                                <li id="rmenu11" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(3,'rmenu1','rmusic1');">
+                                    24小时</a></li>
+                                <li id="rmenu12"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(4,'rmenu1','rmusic1');">
+                                    本季热歌</a></li>
+                            </ul>
+                            <div id="rmusic11" style="display: none;">
+                            </div>
+                            <div id="rmusic12" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(1,'rmenu1');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                        <div class="wxsbad">
+                            <img src="images/1246959844428.jpg" alt="" /></div>
+                        <div class="swxlist">
+                            <ul class="tnav">
+                                <li id="lmenu21" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(5,'lmenu2','lmusic2');">
+                                    韩流来袭</a></li>
+                                <li id="lmenu22"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(6,'lmenu2','lmusic2');">
+                                    摇滚盛宴</a></li>
+                            </ul>
+                            <div id="lmusic21" style="display: none;">
+                            </div>
+                            <div id="lmusic22" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(2,'lmenu2');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                        <div class="srtlist">
+                            <ul class="tnav">
+                                <li id="rmenu21" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(7,'rmenu2','rmusic2');">
+                                    影视原声</a></li>
+                                <li id="rmenu22"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(8,'rmenu2','rmusic2');">
+                                    嘻哈风潮</a></li>
+                            </ul>
+                            <div id="rmusic21" style="display: none;">
+                            </div>
+                            <div id="rmusic22" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(3,'rmenu2');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                        <div class="wxsbad">
+                            <img src="images/1246009907696.gif" alt="" /></div>
+                        <div class="swxlist">
+                            <ul class="tnav">
+                                <li id="lmenu31" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(9,'lmenu3','lmusic3');">
+                                    欧美主流</a></li>
+                                <li id="lmenu32"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(10,'lmenu3','lmusic3');">
+                                    爵士蓝调</a></li>
+                            </ul>
+                            <div id="lmusic31" style="display: none;">
+                            </div>
+                            <div id="lmusic32" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(4,'lmenu3');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                        <div class="srtlist">
+                            <ul class="tnav">
+                                <li id="rmenu31" class="on"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(11,'rmenu3','rmusic3');">
+                                    日式流行</a></li>
+                                <li id="rmenu32"><a href="javascript:void(null);" onmouseover="objTDR.UpdateBodyMenu(12,'rmenu3','rmusic3');">
+                                    动漫王国</a></li>
+                            </ul>
+                            <div id="rmusic31" style="display: none;">
+                            </div>
+                            <div id="rmusic32" style="display: none;">
+                            </div>
+                            <div class="paop">
+                                <a href="javascript:void(null);" onclick="objTDR.AddAllMusicToList(5,'rmenu3');">
+                                    <img src="images/tj_57.gif" alt="" /></a></div>
+                        </div>
+                    </div>
+                    <!--endtoday-->
+                </div>
+                <div id="musicDanceDiv" class="wx_mid" style="display: none; height: 422px; margin: 5px;">
+                </div>
+                <div id="netMusicDiv" class="wx_mid">
+                    <div class="mfl">
+                        <div onclick="GyyxWebUI.MenuClass.MenuPucker(1,0);">
+                            <h4>
+                                <a href="#">最新专辑</a></h4>
+                        </div>
+                        <div style="display: block;" id='subMenu1'>
+                            <div id="newSpecial">
+                                <ul class="bul">
+                                    <asp:DataList runat="server" ID="dlstSpecial" OnItemDataBound="dlstSpecial_ItemDataBound1"
+                                        Width="118px">
+                                        <ItemTemplate>
+                                            <li><a class="close" id="twoMenus<%#Eval("Code")%>" onclick="GyyxWebUI.MenuClass.MenuPucker(<%#Eval("Code")%>,2)">
+                                                <%#Eval("SpecialType")%></a></li>
+                                            <ul class="bsul">
+                                                <div id="musicSpecial<%#Eval("Code")%>">
+                                                    <asp:DataList runat="server" ID="dlstSpecialItems">
+                                                        <ItemTemplate>
+                                                            <li onmouseover="javascript:this.className='on'" onmouseout="javascript:this.className=''">
+                                                                <img src="images/mpsl_14.gif" id="imgMusic<%#Eval("Code")%>" /><a onclick="GyyxWebUI.MenuClass.Test1(-1,<%#Eval("Code")%>);webui.BindCentenMenu('<%#Eval("SpecialName") %>',-1,23);"><%# DataBinder.Eval(Container.DataItem, "SpecialName").ToString().Trim().Length > 10 ? DataBinder.Eval(Container.DataItem, "SpecialName").ToString().Trim().Substring(0, 10) : DataBinder.Eval(Container.DataItem, "SpecialName").ToString().Trim()%></a>
+                                                            </li>
+                                                        </ItemTemplate>
+                                                    </asp:DataList>
+                                                </div>
+                                            </ul>
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                </ul>
+                                </ul>
+                            </div>
+                        </div>
+                        <div onclick="GyyxWebUI.MenuClass.MenuPucker(2,0);">
+                            <h4>
+                                <a href="#">音乐分类</a></h4>
+                        </div>
+                        <div style="display: none" id='subMenu2'>
+                            <div id="musicType">
+                                <ul class="bul">
+                                    <asp:DataList runat="server" ID="dlstNewSpecial" OnItemDataBound="dlstNewSpecial_ItemDataBound1"
+                                        Width="118px">
+                                        <ItemTemplate>
+                                            <li><a class="close" id="twoMenu<%#Eval("Code")%>" onclick="GyyxWebUI.MenuClass.MenuPucker(<%#Eval("Code")%>,1)">
+                                                <%#Eval("GroupName")%></a></li>
+                                            <ul class="bsul">
+                                                <div id="musicName<%#Eval("Code")%>">
+                                                    <asp:DataList runat="server" ID="dlstNewSpecialItems">
+                                                        <ItemTemplate>
+                                                            <li onmouseover="javascript:this.className='on'" onmouseout="javascript:this.className=''">
+                                                                <img src="images/mpsl_14.gif" id="imgMusic<%#Eval("Code")%>" /><a onclick="GyyxWebUI.MenuClass.Test1(-1,<%#Eval("Code")%>);webui.BindCentenMenuNew('<%#Eval("Code")%>',-1,41)"><%# DataBinder.Eval(Container.DataItem, "GroupName").ToString().Trim().Length > 10 ? DataBinder.Eval(Container.DataItem, "GroupName").ToString().Trim().Substring(0, 10) : DataBinder.Eval(Container.DataItem, "GroupName").ToString().Trim()%></a>
+                                                            </li>
+                                                        </ItemTemplate>
+                                                    </asp:DataList>
+                                                </div>
+                                            </ul>
+                                        </ItemTemplate>
+                                    </asp:DataList>
+                                </ul>
+                            </div>
+                        </div>
+                        <div onclick="GyyxWebUI.MenuClass.MenuPucker(3,0);">
+                            <h4>
+                                <a href="#">歌手列表</a></h4>
+                        </div>
+                        <div style="display: none" id='subMenu3'>
+                            <div id="singerLists">
+                                <div class="labc">
+                                    <%= chansonnierInitialOut%>
+                                </div>
+                                <div id="chansonnierDataList">
+                                </div>
+                            </div>
+                        </div>
+                        <div onclick="GyyxWebUI.MenuClass.MenuPucker(4,0);" style="display: none;">
+                            <h4>
+                                <a href="javascript:void(null);">用户分享</a></h4>
+                        </div>
+                        <div style="display: none" id='subMenu4'>
+                            <div id="userShare">
+                                <ul class="bul">
+                                    <li><a href="javascript:void(null);" class="close">暂无用户分享</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="mpr" id="leftDiv">
+                        <div id="headerMusicInfo" class="mpru">
+                        </div>
+                        <!---->
+                        <div class="mprglt">
+                            <span class="gm">歌名</span><span class="gs">歌手</span><span class="zj">专辑</span><span
+                                class="st">试听</span><span class="rq">人气</span></div>
+                        <div id="ShowMusicList" style="height: 385px; overflow-y: scroll;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mlwcon" style="display: none;" id="gamePageData">
+     
+                    <iframe name="frammain" scrolling="no" frameborder="0" marginwidth="0" marginheight="0"
+                        width="100%" height="100%" src="GameDataBind.aspx"></iframe>
+            </div>
+            <div class="mrwx" id="rightIndent">
+                <div onclick="GyyxWebUI.MenuClass.MenuHideDiv();">
+                    <a href="javascript:void(null);"><span class="lttp"></span></a>
+                </div>
+            </div>
+            <div class="mruser" id="rightDiv">
+                <div id="userLogin" class="mrutp">
+                    <p class="pimg">
+                        <img src="images/mrbj_03.gif" alt="" /></p>
+                    <p>
+                        听歌就送积分<br />
+                    </p>
+                    <p>
+                        <label>
+                            用户名</label><input id="userName" type="text" class="w100" /></p>
+                    <p>
+                        <label>
+                            密 码</label><input id="passWord" type="password" class="w100" /></p>
+                    <a href="#" class="wx1" onclick="userData.login($F('userName'),$F('passWord'));">
+                    </a><a class="wx" href="http://www.gyyx.cn/member/MyRegister1.aspx" target="_blank">
+                    </a>
+                </div>
+                <!---->
+                <div class="mrltop" onclick="webui.CreateMusicListNameUI();$('MusicListNameDiv').style.display=='none'?webui.showDiv('MusicListNameDiv'):webui.clonseDiv('MusicListNameDiv');"
+                    style="cursor: hand;">
+                    <img src="images/mrbj_20.gif" class="left" />播放列表：<span id="playListNameSpan"></span><img src="images/mrbj_23.gif" class="right" alt="" />
+                </div>
+                <div id="MusicListNameDiv" class="wxdiv" style="left: 5px; top: 180px; position: absolute;
+                    display: none;">
+                    <div id="MusicListNameDivLeft" class="left">
+                    </div>
+                    <div id="MusicListNameDivRight" class="right">
+                    </div>
+                </div>
+                <div style="height: 256px; overflow-y: scroll;">
+                    <div id="nowPlayList">
+                    </div>
+                </div>
+                <div class="groupList">
+                    <a href="javascript:void(null);" id="btnEmpty" onclick="playMusicList.GroupWorkEmpty();"
+                        class="Empty"></a><a href="javascript:void(null);" id="btnDelete" onclick="playMusicList.GroupWorkDelete();"
+                            class="Delete"></a>
+                </div>
+                <!---->
+            </div>
+        </div>
+        <!---->
+        <div class="mpspd">
+            <div class="btn_left">
+                <a href="javascript:void(null);">
+                    <img src="images/bopt_03.gif" alt="" /></a></div>
+            <div class="btn_space" id="playtrack">
+                <div class="btn_spd" id="playhandle">
+                    <img src="images/bopt_04.gif" alt="" /></div>
+            </div>
+            <div class="btn_right">
+                <a href="javascript:void(null);">
+                    <img src="images/bopt_06.gif" alt="" /></a></div>
+        </div>
+        <!---->
+        <div class="mplopt">
+            <div class="btn_play"><a id="btnPlay" href="#" onclick="mediaplay.playNow();"><img id="imgPlay" src="images/imgPlay_2.gif" alt="" id="imgPlay" onmouseover="webui.MakeButtonUI('imgPlay',1);"onmouseout="webui.MakeButtonUI('imgPlay',2);" /></a></div>
+            <div class="btn_stop">
+                <a href="#" onclick="mediaplay.playStop();"><img id="imgStop" src="images/imgStop_2.gif" alt="" onmouseover="webui.MakeButtonUI('imgStop',1);"onmouseout="webui.MakeButtonUI('imgStop',2);" /></a></div>
+            <div class="btn_prv">
+                <a href="#" onclick="mediaplay.playPrv();"><img src="images/imgPrv_2.gif" alt="" onmouseover="webui.MakeButtonUI('imgPrv',1);"onmouseout="webui.MakeButtonUI('imgPrv',2);" id="imgPrv" /></a></div>
+            <div class="btn_next">
+                <a href="#" onclick="mediaplay.playNext();"><img src="images/imgNext_2.gif" alt="" onmouseover="webui.MakeButtonUI('imgNext',1);"onmouseout="webui.MakeButtonUI('imgNext',2);" id="imgNext" /></a></div>
+            <div class="btn_sund">
+                <a href="#" onclick="mediaplay.playMute();">
+                    <img src="images/imgMuteT_2.gif" alt="" onmouseover="webui.MakeButtonUI('imgMute',1);"
+                        onmouseout="webui.MakeButtonUI('imgMute',2);" id="imgMute" /></a></div>
+            <div id="soundtrack" class="btn_sms">
+                <div id="soundhandle" style="width: 12px; height: 13px;">
+                    <img src="images/bopt_23.gif" alt="" style="float: left;" /></div>
+            </div>
+            <div class="stateimg">
+                <img src="images/music_2.gif" id="musicstateimg" alt="" /></div>
+            <div class="qtxt" id="lblMusicInfo">
+            </div>
+        </div>
+    </div>
+    <div id="debug">
+    </div>
+    <div id="userInfoDiv" class="anlst" style="display: none;">
+    </div>
+    <script language="javascript" type="text/javascript" src="Js/MusicBoxPlayV0_01.js"></script>
+</body>
+</html>

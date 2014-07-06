@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>H!Guoの音乐盒</title>
+    <link href="css/cssrest.css" rel="stylesheet" type="text/css" />
+    <link href="css/indexStyle.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="Js/prototype.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/gygamelist.js"></script>
+    <script language="javascript" type="text/javascript" src="Js/DataModel.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Language" content="utf-8"/>
+</head>
+<body>
+    <div class="main">
+	<div class="top">
+		<h1><a  href="http://www.gyyx.cn" target="_blank">光宇游戏</a></h1>
+<div id="tb" style="display:block;float:left;width:267px; height:60px;margin-left:90px;"></div>
+		<div class="prlink"><a href="#">登录</a><a href="http://www.gyyx.cn/member/MyRegister1.aspx" target="_blank">注册</a><a href="http://bbs.gyyx.cn" target="_blank">音乐论坛</a><a href="http://www.gyyx.cn" target="_blank" class="last">社区首页</a></div>
+	</div>
+	<!---->
+
+	<!---->
+	<div class="muiad"><img src="images/mn_index_57.gif"  alt="" /></div>
+	<div class="mleft">
+		<div class="bocblue">
+			<h3>专辑推荐<a href="#"></a></h3>
+			<div class="zjtj" id="DivHeaderSpecial">
+
+			</div>
+		</div>
+		<!---->
+				<div class="bochui">
+			<h3>光宇电台</h3>
+			<div class="gydt">
+				<div class="predt">
+					<div class="pdtl">
+						<h4>问道电台</h4>
+						<p class="plimg"><img alt="" src="images/gydt_131.jpg" /><label id="nowWendaoPlayInfo"></label><a href="#" onclick="indexPop.listenSelectedMusics([{file:'http://radio.gyyx.cn/live.asx',lrc:'',title:'问道之声',singer:'光宇华夏',album:'光宇电台',popularity:'0',servercode:'1460'}]);return false;"><img src="images/gydt_21.gif" /></a></p>
+						<p class="prinfo"> 《问道之声》电台一周年台庆特别  <br/>
+ 资深游戏DJ大招募预选结果出炉  <br/>
+ 问道电台资深游戏DJ超级大招募
+<br/>
+</p>
+					</div>
+					<div class="gywk">
+						<div class="gywkcon" id="wenDaoRadioList">
+							<ul class="wknav">
+								<li id="wdradio-1" onmouseover="ipUI.BindRadioMenu(1,1);"><a href="#">星期一</a></li>
+								<li id="wdradio-2" onmouseover="ipUI.BindRadioMenu(2,1);"><a href="#">星期二</a></li>
+								<li id="wdradio-3" onmouseover="ipUI.BindRadioMenu(3,1);"><a href="#">星期三</a></li>
+								<li id="wdradio-4" onmouseover="ipUI.BindRadioMenu(4,1);"><a href="#">星期四</a></li>
+								<li id="wdradio-5" onmouseover="ipUI.BindRadioMenu(5,1);"><a href="#">星期五</a></li>
+								<li id="wdradio-6" onmouseover="ipUI.BindRadioMenu(6,1);"><a href="#">星期六</a></li>
+								<li id="wdradio-0" onmouseover="ipUI.BindRadioMenu(0,1);" style="margin-right:0px;" ><a href="#">星期天</a></li>
+							</ul>
+							<div id="RadioWDListDiv"></div>
+
+						</div>
+					</div>
+				</div>
+				<div class="prenodt">
+					<div class="pdtl">
+						<h4>西游电台</h4>
+						<p class="plimg"><img src="images/gydt_13.gif" /><label id="nowXiYouPlayInfo">一些文字</label><a href="#" onclick="indexPop.listenSelectedMusics([{file:'http://xyradio.gyyx.cn/live.asx',lrc:'',title:'西游之声',singer:'光宇华夏',album:'光宇电台',popularity:'0',servercode:'1463'}]);return false;"><img src="images/gydt_21.gif" /></a></p>
+						<p class="prinfo"> “技嘉免费送大礼”活动4月启航     <br/>
+   西游Q记网络电台联合吉神文化《音    <br/>
+   西游Q记网络电台夜间情感节目——
+<br/>	</p>
+					</div>
+					<div class="gywk">
+						<div class="gywkcon">
+							<ul class="wknav">
+								<li id="xyradio-1" onmouseover="ipUI.BindRadioMenu(1,2);"><a href="#">星期一</a></li>
+								<li id="xyradio-2" onmouseover="ipUI.BindRadioMenu(2,2);"><a href="#">星期二</a></li>
+								<li id="xyradio-3" onmouseover="ipUI.BindRadioMenu(3,2);"><a href="#">星期三</a></li>
+								<li id="xyradio-4" onmouseover="ipUI.BindRadioMenu(4,2);"><a href="#">星期四</a></li>
+								<li id="xyradio-5" onmouseover="ipUI.BindRadioMenu(5,2);"><a href="#">星期五</a></li>
+								<li id="xyradio-6" onmouseover="ipUI.BindRadioMenu(6,2);"><a href="#">星期六</a></li>
+								<li id="xyradio-0" onmouseover="ipUI.BindRadioMenu(0,2);" style="margin-right:0px;"><a href="#">星期天</a></li>
+							</ul>
+							<div id="RadioXYListDiv"></div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div class="uting">
+			<p class="spton">他们在听</p>
+			<div id="netListMusic" class="con">
+			露欣 <span class="blueFont">收藏了</span> 董贞 - 仙剑赋<br />想简单 <span class="blueFont">收藏了</span> 陈楚生 - 与你同在<br />雪海花旗 <span class="blueFont">收藏了</span> 蓝色天际 - indian dreams 印度人的梦想<br />冒夨鬼:瀞x.<span class="blueFont">收藏了</span>rain - kiss the rain <br />雨的印记Tracy. <span class="blueFont">收藏了</span>Ashley Tisdale - Not Like That
+			</div>
+			<div class="btn"><!---->			</div>
+		</div>
+		<!---->
+		<div class="bocblue">
+			<h3>新品上市<a href="#"></a></h3>
+			<div class="xpss" id="DivBodySpecial">
+
+			</div>
+		</div>
+		<!---->
+		<div class="mltt" style="float:left;">
+			<h3>新歌抢听<a href="#"></a></h3>
+			<div id="BottomMusicList10"></div>
+		</div>
+		<!---->
+		<div class="mltt" style="float:right;">
+			<h3>热门歌曲榜<a href="#"></a></h3>
+			<div id="BottomMusicList11"></div>
+		</div>
+	</div>
+	<!---->
+	<div class="mright">
+		<div class="mrad"><a href="http://58.gyyx.cn" target="_blank"><img src="images/mn_index_62.jpg" alt="" /></a></div>
+		<div class="mrlist">
+			<h3>收藏排行榜<a href="javascript:void(null);" class="c01on" id="RightMusicMenu71" onmouseover="$('RightMusicMenu71').className='c01on';$('RightMusicMenu72').className='c02';$('RightMusicList72').style.display='none';$('RightMusicList71').style.display='';">48小时</a><a href="javascript:void(null);" class="c02" id="RightMusicMenu72" onmouseover="$('RightMusicMenu71').className='c01';$('RightMusicMenu72').className='c02on';$('RightMusicList71').style.display='none';$('RightMusicList72').style.display='';">周</a></h3>
+			<div id="RightMusicList71">
+			</div>
+			<div id="RightMusicList72" style="display:none;">
+			</div>
+		</div>
+		<!---->
+				<div class="mrlist">
+			<h3>好评排行榜<a href="javascript:void(null);" class="c01on" id="RightMusicMenu81" onmouseover="$('RightMusicMenu81').className='c01on';$('RightMusicMenu82').className='c02';$('RightMusicList81').style.display='';$('RightMusicList82').style.display='none';">48小时</a><a href="javascript:void(null);" class="c02" id="RightMusicMenu82" onmouseover="$('RightMusicMenu81').className='c01';$('RightMusicMenu82').className='c02on';$('RightMusicList81').style.display='none';$('RightMusicList82').style.display='';">周</a></h3>
+			<div id="RightMusicList81"></div>
+			<div id="RightMusicList82" style="display:none;"></div>
+		</div>
+		<!---->
+				<div class="mrlist">
+			<h3>歌手人气排行榜<a href="javascript:void(null);" class="c01on" id="RightMusicMenu91" onmouseover="$('RightMusicMenu91').className='c01on';$('RightMusicMenu92').className='c02';$('RightMusicList91').style.display='';$('RightMusicList92').style.display='none';">48小时</a><a href="javascript:void(null);" class="c02" id="RightMusicMenu92" onmouseover="$('RightMusicMenu91').className='c01';$('RightMusicMenu92').className='c02on';$('RightMusicList91').style.display='none';$('RightMusicList92').style.display='';">周</a></h3>
+			<div id="RightMusicList91"></div>
+			<div id="RightMusicList92" style="display:none;"></div>
+		</div>
+		<div class="mltt">
+			<h3>华语歌曲榜<a href="#"></a></h3>
+			<div id="BottomMusicList12"></div>
+		</div>
+		<!---->
+	</div>
+	<div class="bottom">地址:北京市海淀区上地东路1号盈创动力大厦A502　　　　电话：010-62977778</div>
+</div>
+<div id="mylayer">如果您对音乐盒项目有什么更好的建议或bug清提交报告到<a href="http://www.wyx.cn/Bottom/FeedBack.aspx?FBID=182" target="_blank">这里</a></div>
+
+
+    <script language="javascript" type="text/javascript" src="Js/IndexPageScr.js"></script>
+</body>
+</html>

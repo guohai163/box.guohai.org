@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+
+.mlvt{ width:618px; overflow:hidden; font-size:12px; margin:5px auto; padding:5px; background:#F5F5F5; clear:both;}
+
+.newzj{ background:url(../images/tj_03.gif) no-repeat top; padding-top:5px;}
+.newzj .tnav{ border:1px solid #DFDFDF; border-width:0 1px; height:25px; overflow:hidden; background:url(../images/tj_06.gif) repeat-x; padding-right:3px;}
+.newzj .tnav li{ width:61px; height:21px; text-align:center; padding-top:4px; background:url(../images/todaybg.png) no-repeat 0px -43px; float:right; margin-left:5px;}
+.newzj .tnav li a{ color:#555555;}
+.newzj .tnav li.on{ background:url(../images/todaybg.png) no-repeat 0px -18px;}
+.newzj .tnav li.on a{ color:#fff; font-weight:700;}
+.newzj .tnav li.htit{ width:80px; color:#3A6391; font-weight:700; text-align:left; padding-left:10px; padding-top:3px; background:none; margin-left:0px; float:left;}
+.newzj .sblist{ border:1px solid #DFDFDF; border-width:0 1px;  padding:5px; clear:both; background:#fff; zoom:1;}
+.newzj .sblist:after{ content:""; display:block; clear:both;}
+.newzj .sblist li{ float:left; zoom:1; width:190px; padding:5px 5px;}
+.newzj .sblist li:after{ content:""; display:block; clear:both;}
+.newzj .sblist .timg{ border:1px solid #D7D7D7; background:#F0F2EF; vertical-align:top; display:block; padding:2px; margin-right:10px; display:inline; float:left;}
+.newzj .sblist li p{ line-height:20px; color:#636363;}
+.newzj .sblist li p a{ color:#1D75DF;}
+.newzj .sblist li p.tit{ color:#000;}
+.newzj .cail{ background:#F5F5F5 url(../images/tj_321.gif) no-repeat bottom; height:5px; }
+.newzj .cail h3{ border-left:1px solid #DFDFDF; width:80px; padding-left:8px;  height:16px; padding-top:4px;font-weight:700; float:left;}
+.newzj .cail ul{ border-right:1px solid #DFDFDF; width:528px; height:17px; line-height:17px; padding-top:3px; overflow:hidden; float:left;}
+.newzj .cail li{ background:url(../images/tj_30.gif) no-repeat 0px 0px; padding-left:17px; margin-right:15px; float:left;}
+.newzj .cail li.more{ width:42px; height:18px; background:url(../images/tj_27.gif); overflow:hidden; float:right; margin:-1px 10px 0 0; padding:0px; display:inline;}
+.newzj .cail li.more a{ font-size:0px; text-indent:-9999px; line-height:0px; display:block; width:42px; height:18px;}
+.newzj .cail ul a{color:#316499;}
+.addSingle{width:15px;height:15px;background:url(../images/todaybg.png) no-repeat 0px 0px;display:block;}
+.addSinglea{width:15px;height:15px;background:url(../images/todaybg.png) no-repeat 0px 0px;display:block;}
+
+.wxsbad{ clear:both; padding:5px 0; text-align:center;}
+
+.swxlist{ width:302px; padding:7px 0px 0px 0px; background:url(../images/tj_36.gif) no-repeat left top; float:left;}
+.swxlist .tnav{ border:1px solid #DFDFDF; border-width:0 1px; height:25px; overflow:hidden; background:url(../images/tj_06.gif) repeat-x; padding-left:3px;}
+.swxlist .tnav li{ width:61px; height:21px; text-align:center; padding-top:4px; background:url(../images/todaybg.png) no-repeat 0px -43px; float:left; margin-right:5px;}
+.swxlist .tnav li a{ color:#555555;}
+.swxlist .tnav li.on{ background:url(../images/todaybg.png) no-repeat 0px -18px;}
+.swxlist .tnav li.on a{ color:#fff; font-weight:700;}
+.swxlist .slist{ border:1px solid #DFDFDF; border-width:0 1px; color:#5E5E5E; background:#fff; clear:both; padding:5px;}
+.swxlist .slist li{ line-height:22px; height:22px; overflow:hidden; clear:both; }
+.swxlist .slist li span{ overflow:hidden;}
+.swxlist .slist .name{ width:180px; display:inline-block; color:#000000;}
+.swxlist .slist .name a{ color:#000000;}
+.swxlist .slist .author{ width:70px; display:inline-block; color:#000000;}
+.swxlist .slist .author a{ color:#000000;}
+.swxlist .slist .opm{ width:30px; height:15px; padding-top:4px; vertical-align:top; }
+.swxlist .paop{ background:url(../images/tj_63.gif) no-repeat bottom #fff; text-align:right; line-height:18px; height:18px; padding:10px 15px;}
+.swxlist .paop a{ margin-left:12px;}
+
+.srtlist{ width:302px; padding:7px 0px 0px 0px; background:url(../images/tj_36.gif) no-repeat left top; float:right;}
+.srtlist .tnav{ border:1px solid #DFDFDF; border-width:0 1px; height:25px; overflow:hidden; background:url(../images/tj_06.gif) repeat-x; padding-left:3px;}
+.srtlist .tnav li{ width:61px; height:21px; text-align:center; padding-top:4px; background:url(../images/todaybg.png) no-repeat 0px -43px; float:left; margin-right:5px;}
+.srtlist .tnav li a{ color:#555555;}
+.srtlist .tnav li.on{ background:url(../images/todaybg.png) no-repeat 0px -18px;}
+.srtlist .tnav li.on a{ color:#fff; font-weight:700;}
+.srtlist .slist{ border:1px solid #DFDFDF; border-width:0 1px; color:#5E5E5E; background:#fff; clear:both; padding:5px;}
+.srtlist .slist li{ line-height:22px; height:22px; overflow:hidden; clear:both;}
+.srtlist .slist li span{ overflow:hidden;}
+.srtlist .slist .name{ width:180px; display:inline-block; color:#000000;}
+.srtlist .slist .name a{ color:#000000;}
+.srtlist .slist .author{ width:70px; display:inline-block; }
+.srtlist .slist .author a{color:#000000;}
+.srtlist .slist .opm{ width:30px; height:15px; padding-top:4px; vertical-align:top; display:inline-block;}
+.srtlist .paop{ background:url(../images/tj_63.gif) no-repeat bottom #fff; text-align:right; line-height:18px; height:18px; padding:10px 15px; }
+.srtlist .paop a{ margin-left:12px;}
